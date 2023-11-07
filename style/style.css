@@ -28,7 +28,7 @@ div.container {
   border-radius: 20px;
 }
 
-img {
+.card img {
   opacity: 70%;
   transition: 0.5s;
 }
@@ -72,4 +72,37 @@ div.main {
 ::-webkit-scrollbar-thumb {
   background: var(--neutral-01);
   border-radius: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  div.view img {
+    height: 40vh;
+  }
+
+  .card img {
+    width: 160px;
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  div.view img {
+    height: 20vh;
+  }
+
+  .card img {
+    width: 80px;
+    height: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }

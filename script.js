@@ -5,5 +5,10 @@ images.forEach(function (img) {
   img.addEventListener("click", function (e) {
     const changeImages = e.target.src;
     mainImage.setAttribute("src", changeImages);
+
+    mainImage.classList.add("fade");
+    setTimeout(function () {
+      mainImage.classList.remove("fade");
+    }, 500);
   });
 });
